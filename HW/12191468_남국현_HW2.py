@@ -6,14 +6,15 @@ n1_end = 7
 n2_start = -8
 n2_end = 2
 
+new_pi = round(np.pi, 2)
 
 # n1 = (0 ~ 7)
 n1 = np.arange(n1_start, n1_end + 1)
-x1 = 3 * np.cos(np.pi/2 * n1)
+x1 = 3 * np.round(np.cos(np.pi/2 * n1),2)
 
 # n2 = (-8 ~ 2)
 n2 = np.arange(n2_start, n2_end + 1)
-x2 = 3 * np.sin(np.pi/2 * n2)
+x2 = 3 * np.round(np.sin(np.pi/2 * n2),2)
 
 # n = [-8 ~ 7]
 n = np.arange(min(min(n1), min(n2)), max(max(n1), max(n2)) + 1)
@@ -34,6 +35,7 @@ x1_end[min(n1_shifted):max(n1_shifted) + 1] = x1
 x2_end[min(n2_shifted):max(n2_shifted) + 1] = x2
 
 x = x1_end * x2_end
+print(x)
 
 # 그래프 출력
 plt.figure(figsize = (10, 10))
