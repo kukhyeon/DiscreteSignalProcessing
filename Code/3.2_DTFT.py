@@ -17,6 +17,7 @@ X, omega = DTFT(xn, n)
 magnitude_X = np.abs(X)
 phase_X = np.angle(X, deg="True")
 
+
 plt.figure(figsize=(15, 10))
 plt.subplot(3, 1, 1)
 plt.stem(n, xn, basefmt="blue")
@@ -44,7 +45,7 @@ xn = np.power(0.5, n)
 
 X, omega = DTFT(xn, n)
 
-magnitude_X = np.abs(X)
+X = np.abs(X)
 phase_X = np.angle(X, deg="True")
 
 plt.figure(figsize=(15, 10))

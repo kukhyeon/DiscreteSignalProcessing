@@ -45,14 +45,21 @@ X = np.real(X)
 
 plt.figure(figsize=(15,15))
 
-plt.subplot(2, 1, 1)
+plt.subplot(3, 1, 1)
 plt.stem(n, xc)
 plt.grid()
 plt.xticks(np.arange(start_t/Ts, end_t/Ts+1, 10))
 plt.xlabel("n")
 plt.ylabel("x[n]")
 
-plt.subplot(2, 1, 2)
+plt.subplot(3, 1, 2)
+plt.plot(w/np.pi, X)
+plt.grid()
+plt.xticks(np.arange(-1, 1.2, 0.2))
+plt.xlabel("Frequency in pi units.")
+plt.ylabel("X(w)")
+
+plt.subplot(3, 1, 3)
 plt.plot(w/np.pi, X)
 plt.grid()
 plt.xticks(np.arange(-1, 1.2, 0.2))
